@@ -35,7 +35,23 @@ export default function Navigation() {
               Docs
             </Link>
             */}
-            <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+            <button 
+              onClick={() => {
+                console.log('Get Early Access (nav) clicked');
+                // Track button click for analytics
+                if (typeof window !== 'undefined' && 'gtag' in window) {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  (window as any).gtag('event', 'click', {
+                    event_category: 'CTA',
+                    event_label: 'Get Early Access - Navigation'
+                  });
+                }
+                // Open waiting list form
+                window.open('https://tally.so/r/mKKoaA', '_blank');
+              }}
+              aria-label="Get early access to Observare"
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+            >
               Get Early Access
             </button>
           </div>
