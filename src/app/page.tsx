@@ -49,7 +49,7 @@ export default function Home() {
           Every Hour Your Agents Run Blind Costs You:
         </h2>
         <p className="text-xl text-gray-300 text-center mb-12 animate-fade-in animation-delay-200">
-          (And you don't even know it)
+          (And you don&apos;t even know it)
         </p>
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {[
@@ -129,7 +129,7 @@ export default function Home() {
       <section className="relative px-6 py-24 mx-auto max-w-7xl text-center">
         <div className="animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
-            We're Onboarding 10 Design Partners This Month
+            We&apos;re Onboarding 10 Design Partners This Month
           </h2>
           <p className="text-xl text-gray-200 mb-4 max-w-2xl mx-auto">
             Get 6 months free. White-glove onboarding. Direct access to our team.
