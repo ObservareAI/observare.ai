@@ -75,8 +75,11 @@ export default function Navigation() {
             </button>
           </div>
 
-          {/* Mobile CTA button */}
-          <div className="md:hidden">
+          {/* Mobile navigation */}
+          <div className="md:hidden flex items-center space-x-3">
+            <Link href="/docs" className="text-gray-300 hover:text-white transition-colors text-sm">
+              Docs
+            </Link>
             <button 
               onClick={() => {
                 console.log('Get Early Access (mobile nav) clicked');
