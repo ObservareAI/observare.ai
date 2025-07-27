@@ -25,7 +25,7 @@ export default function Docs() {
               <h3 className="text-xl font-semibold mb-4 text-gray-200">Prerequisites</h3>
               <div className="space-y-3 text-gray-400">
                 <p>
-                  You'll need an Observare API key to use this SDK. 
+                  You&apos;ll need an Observare API key to use this SDK. 
                   <button 
                     onClick={() => {
                       window.location.href = 'mailto:bseager21@gmail.com?subject=API Key Request - Observare SDK&body=Hi,%0D%0A%0D%0AI would like to request an API key for the Observare SDK.%0D%0A%0D%0ACompany:%0D%0AUse Case:%0D%0A%0D%0AThanks!';
