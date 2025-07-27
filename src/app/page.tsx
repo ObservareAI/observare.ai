@@ -25,6 +25,7 @@ export default function Home() {
               onClick={() => {
                 console.log('Book a Demo clicked');
                 if (typeof window !== 'undefined' && 'gtag' in window) {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   (window as any).gtag('event', 'click', {
                     event_category: 'CTA',
                     event_label: 'Book a Demo - Hero'
@@ -40,6 +41,7 @@ export default function Home() {
               onClick={() => {
                 console.log('Get Early Access clicked');
                 if (typeof window !== 'undefined' && 'gtag' in window) {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   (window as any).gtag('event', 'click', {
                     event_category: 'CTA',
                     event_label: 'Get Early Access - Hero'
