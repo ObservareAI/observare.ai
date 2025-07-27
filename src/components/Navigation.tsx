@@ -24,15 +24,15 @@ export default function Navigation() {
 
           {/* Navigation Links - Ready for future pages */}
           <div className="hidden md:flex items-center space-x-4">
-            {/* Add navigation links here as you create more pages
+            <Link href="/docs" className="text-gray-300 hover:text-white transition-colors">
+              Docs
+            </Link>
+            {/* Add more navigation links here as you create more pages
             <Link href="/features" className="text-gray-300 hover:text-white transition-colors">
               Features
             </Link>
             <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors">
               Pricing
-            </Link>
-            <Link href="/docs" className="text-gray-300 hover:text-white transition-colors">
-              Docs
             </Link>
             */}
             <button 
