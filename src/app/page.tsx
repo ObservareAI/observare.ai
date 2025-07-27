@@ -7,20 +7,26 @@ export default function Home() {
     <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
 
       {/* Hero Section */}
-      <section className="relative px-6 py-32 mx-auto max-w-6xl">
+      <section className="relative px-4 sm:px-6 py-16 sm:py-24 md:py-32 mx-auto max-w-6xl">
         <div className="text-center space-y-8">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-orange-400 whitespace-nowrap">Your AI Agents Are Failing Silently.</span>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-orange-400 block sm:inline sm:whitespace-nowrap">
+              <span className="sm:hidden">AI Agents Fail Silently.</span>
+              <span className="hidden sm:inline">Your AI Agents Are Failing Silently.</span>
+            </span>
             <br className="hidden md:block" />
-            <span className="text-3xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">We Make Them Scream.</span>
+            <span className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 block sm:inline">
+              <span className="sm:hidden">We Make Them Scream.</span>
+              <span className="hidden sm:inline">We Make Them Scream.</span>
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
             Cut debugging time significantly. Ship AI features 3x faster. Sleep at night.
           </p>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-400 max-w-3xl mx-auto px-4">
             Complete visibility and control over your AI agents in production.
           </p>
-          <div className="flex justify-center space-x-4 pt-8">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-8 px-4">
             <button 
               onClick={() => {
                 console.log('Book a Demo clicked');
@@ -33,7 +39,7 @@ export default function Home() {
                 }
                 window.location.href = 'mailto:bseager21@gmail.com?subject=Demo Request - Observare&body=Hi Brandon,%0D%0A%0D%0AI would like to schedule a demo of Observare.%0D%0A%0D%0ACompany:%0D%0AUse Case:%0D%0APreferred Time:%0D%0A%0D%0AThanks!';
               }}
-              className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors duration-200 shadow-lg"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors duration-200 shadow-lg text-center"
             >
               Book a Demo
             </button>
@@ -49,7 +55,7 @@ export default function Home() {
                 }
                 window.open('https://tally.so/r/mKKoaA', '_blank');
               }}
-              className="px-8 py-4 border border-gray-600 hover:border-gray-500 text-white font-semibold rounded-lg transition-colors duration-200"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border border-gray-600 hover:border-gray-500 text-white font-semibold rounded-lg transition-colors duration-200 text-center"
             >
               Get Early Access
             </button>
@@ -58,8 +64,8 @@ export default function Home() {
       </section>
 
       {/* Pain Points Section */}
-      <section className="py-24 bg-gray-800/20">
-        <div className="px-6 mx-auto max-w-6xl">
+      <section className="py-16 sm:py-24 bg-gray-800/20">
+        <div className="px-4 sm:px-6 mx-auto max-w-6xl">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Every Hour Your Agents Run Blind Costs You:

@@ -23,7 +23,7 @@ export default function Navigation() {
           </Link>
 
           {/* Navigation Links - Ready for future pages */}
-          <div className="flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
             {/* Add navigation links here as you create more pages
             <Link href="/features" className="text-gray-300 hover:text-white transition-colors">
               Features
@@ -72,6 +72,27 @@ export default function Navigation() {
               className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900"
             >
               Get Early Access
+            </button>
+          </div>
+
+          {/* Mobile CTA button */}
+          <div className="md:hidden">
+            <button 
+              onClick={() => {
+                console.log('Get Early Access (mobile nav) clicked');
+                if (typeof window !== 'undefined' && 'gtag' in window) {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  (window as any).gtag('event', 'click', {
+                    event_category: 'CTA',
+                    event_label: 'Get Early Access - Mobile Navigation'
+                  });
+                }
+                window.open('https://tally.so/r/mKKoaA', '_blank');
+              }}
+              aria-label="Get early access to Observare"
+              className="px-3 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Access
             </button>
           </div>
 
