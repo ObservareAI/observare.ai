@@ -32,7 +32,7 @@ export default function Home() {
             Cut debugging time by 87%. Ship AI features 3x faster. Sleep at night.
           </p>
           <p className="text-lg text-gray-400 mb-12 animate-fade-in animation-delay-500">
-            The same observability you have for code, now for your AI agents.
+            Complete visibility and control over your AI agents in production.
           </p>
           <div className="flex justify-center space-x-4 animate-fade-in animation-delay-600">
             <div className="w-16 h-1 bg-blue-400 animate-pulse"></div>
@@ -141,37 +141,109 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Compliance & Governance Section */}
+      <section className="relative w-full bg-gradient-to-r from-indigo-900/50 to-purple-900/50 border-y border-gray-700">
+        <div className="px-6 py-16 mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+              AI Agent Compliance & Governance
+            </h2>
+            <p className="text-xl text-gray-300 animate-fade-in animation-delay-200">
+              Because your agents need to follow the rules, not just run fast
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+            <div className="text-center p-6 rounded-xl bg-gray-800/50 border border-gray-700 animate-slide-up">
+              <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Healthcare & HIPAA</h3>
+              <p className="text-gray-400 text-sm">Audit every patient data interaction. Ensure agents follow medical protocols and privacy regulations.</p>
+            </div>
+
+            <div className="text-center p-6 rounded-xl bg-gray-800/50 border border-gray-700 animate-slide-up" style={{ animationDelay: "200ms" }}>
+              <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Finance & SOX</h3>
+              <p className="text-gray-400 text-sm">Track financial decisions, detect bias in lending, maintain immutable audit trails for compliance.</p>
+            </div>
+
+            <div className="text-center p-6 rounded-xl bg-gray-800/50 border border-gray-700 animate-slide-up" style={{ animationDelay: "400ms" }}>
+              <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Government & FedRAMP</h3>
+              <p className="text-gray-400 text-sm">Meet federal security standards. Generate automated compliance reports for regulatory bodies.</p>
+            </div>
+          </div>
+
+          <div className="bg-gray-800/30 rounded-xl p-8 border border-gray-700">
+            <h3 className="text-xl font-semibold text-white mb-4 text-center">Built for Compliance from Day One</h3>
+            <div className="grid md:grid-cols-2 gap-6 text-gray-300">
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-sm"><span className="text-blue-400 font-medium">Real-time compliance tracking</span> across all agent decisions and interactions</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-sm"><span className="text-blue-400 font-medium">Bias detection</span> and discriminatory pattern alerts</p>
+                </div>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-sm"><span className="text-blue-400 font-medium">Automated audit reports</span> ready for regulators and compliance teams</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-sm"><span className="text-blue-400 font-medium">Immutable audit trails</span> for complete decision accountability</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="relative px-6 py-24 mx-auto max-w-7xl text-center">
         <div className="animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
-            We&apos;re Onboarding 10 Design Partners This Month
+            Ready to See What Your AI Agents Are Really Doing?
           </h2>
           <p className="text-xl text-gray-200 mb-4 max-w-2xl mx-auto">
-            Get 6 months free. White-glove onboarding. Direct access to our team.
+            Join developers who are building more reliable AI systems with complete visibility.
           </p>
           <p className="text-lg text-gray-400 mb-12">
-            7 spots left. First call gets priority.
+            Get early access and be the first to know when we launch.
           </p>
           <div className="flex justify-center">
             <button 
               onClick={() => {
-                console.log('Claim Your Spot clicked');
+                console.log('Get Early Access clicked');
                 // Track button click for analytics
                 if (typeof window !== 'undefined' && 'gtag' in window) {
                   // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   (window as any).gtag('event', 'click', {
                     event_category: 'CTA',
-                    event_label: 'Claim Your Spot'
+                    event_label: 'Get Early Access'
                   });
                 }
                 // Open waiting list form
                 window.open('https://tally.so/r/mKKoaA', '_blank');
               }}
-              aria-label="Join the waiting list for Observare design partners"
+              aria-label="Get early access to Observare"
               className="group relative px-8 py-4 overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900"
             >
-              <span className="relative z-10">Claim Your Spot (7 Left)</span>
+              <span className="relative z-10">Get Early Access</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
           </div>
