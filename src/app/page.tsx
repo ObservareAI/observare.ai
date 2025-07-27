@@ -10,40 +10,40 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
+    <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
       {/* Animated background elements */}
       <div className="fixed inset-0 overflow-hidden">
         <div className="absolute -inset-[10px] opacity-50">
-          <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-          <div className="absolute top-0 -right-4 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+          <div className="absolute top-0 -left-4 w-72 h-72 bg-gray-600 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+          <div className="absolute top-0 -right-4 w-72 h-72 bg-gray-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-gray-600 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
         </div>
       </div>
 
       {/* Hero Section */}
       <section className="relative px-6 py-24 mx-auto max-w-7xl">
         <div className={`text-center transform transition-all duration-1000 ${mounted ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 animate-gradient">
-            Your AI Agents Are Failing Silently.
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-orange-400">Your AI Agents Are Failing Silently.</span>
             <br className="hidden md:block" />
-            <span className="text-4xl md:text-6xl">We Make Them Scream.</span>
+            <span className="text-4xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">We Make Them Scream.</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8 animate-fade-in animation-delay-300">
-            Cut debugging time by 87%. Ship AI features 3x faster. Sleep at night.
+            Cut debugging time significantly. Ship AI features 3x faster. Sleep at night.
           </p>
           <p className="text-lg text-gray-400 mb-12 animate-fade-in animation-delay-500">
             Complete visibility and control over your AI agents in production.
           </p>
           <div className="flex justify-center space-x-4 animate-fade-in animation-delay-600">
-            <div className="w-16 h-1 bg-blue-400 animate-pulse"></div>
-            <div className="w-16 h-1 bg-emerald-400 animate-pulse animation-delay-300"></div>
-            <div className="w-16 h-1 bg-purple-400 animate-pulse animation-delay-600"></div>
+            <div className="w-16 h-1 bg-gray-400 animate-pulse"></div>
+            <div className="w-16 h-1 bg-gray-500 animate-pulse animation-delay-300"></div>
+            <div className="w-16 h-1 bg-gray-600 animate-pulse animation-delay-600"></div>
           </div>
         </div>
       </section>
 
       {/* Pain Points Section */}
-      <section className="relative w-full bg-gray-900/50 border-y border-gray-800">
+      <section className="relative w-full bg-gray-800/30 border-y border-gray-700">
         <div className="px-6 py-16 mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in">
@@ -142,10 +142,10 @@ export default function Home() {
       </section>
 
       {/* Compliance & Governance Section */}
-      <section className="relative w-full bg-gradient-to-r from-indigo-900/50 to-purple-900/50 border-y border-gray-700">
+      <section className="relative w-full bg-gray-800/20 border-y border-gray-700">
         <div className="px-6 py-16 mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in text-white">
               AI Agent Compliance & Governance
             </h2>
             <p className="text-xl text-gray-300 animate-fade-in animation-delay-200">
@@ -216,7 +216,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="relative px-6 py-24 mx-auto max-w-7xl text-center">
         <div className="animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Ready to See What Your AI Agents Are Really Doing?
           </h2>
           <p className="text-xl text-gray-200 mb-4 max-w-2xl mx-auto">
@@ -225,7 +225,26 @@ export default function Home() {
           <p className="text-lg text-gray-400 mb-12">
             Get early access and be the first to know when we launch.
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-center space-x-4">
+            <button 
+              onClick={() => {
+                console.log('Book a Demo clicked');
+                // Track button click for analytics
+                if (typeof window !== 'undefined' && 'gtag' in window) {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  (window as any).gtag('event', 'click', {
+                    event_category: 'CTA',
+                    event_label: 'Book a Demo'
+                  });
+                }
+                // Open email client
+                window.location.href = 'mailto:bseager21@gmail.com?subject=Demo Request - Observare&body=Hi Brandon,%0D%0A%0D%0AI would like to schedule a demo of Observare.%0D%0A%0D%0ACompany:%0D%0AUse Case:%0D%0APreferred Time:%0D%0A%0D%0AThanks!';
+              }}
+              aria-label="Book a demo with Observare"
+              className="group relative px-8 py-4 overflow-hidden rounded-xl border border-gray-600 text-white font-semibold shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-gray-500 hover:bg-gray-800 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+            >
+              <span className="relative z-10">Book a Demo</span>
+            </button>
             <button 
               onClick={() => {
                 console.log('Get Early Access clicked');
@@ -241,10 +260,9 @@ export default function Home() {
                 window.open('https://tally.so/r/mKKoaA', '_blank');
               }}
               aria-label="Get early access to Observare"
-              className="group relative px-8 py-4 overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+              className="group relative px-8 py-4 overflow-hidden rounded-xl bg-blue-600 text-white font-semibold shadow-lg transition-all duration-300 hover:bg-blue-700 active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900"
             >
               <span className="relative z-10">Get Early Access</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
           </div>
         </div>

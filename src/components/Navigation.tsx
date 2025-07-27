@@ -23,7 +23,7 @@ export default function Navigation() {
           </Link>
 
           {/* Navigation Links - Ready for future pages */}
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-4">
             {/* Add navigation links here as you create more pages
             <Link href="/features" className="text-gray-300 hover:text-white transition-colors">
               Features
@@ -35,6 +35,25 @@ export default function Navigation() {
               Docs
             </Link>
             */}
+            <button 
+              onClick={() => {
+                console.log('Book a Demo (nav) clicked');
+                // Track button click for analytics
+                if (typeof window !== 'undefined' && 'gtag' in window) {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  (window as any).gtag('event', 'click', {
+                    event_category: 'CTA',
+                    event_label: 'Book a Demo - Navigation'
+                  });
+                }
+                // Open email client
+                window.location.href = 'mailto:bseager21@gmail.com?subject=Demo Request - Observare&body=Hi Brandon,%0D%0A%0D%0AI would like to schedule a demo of Observare.%0D%0A%0D%0ACompany:%0D%0AUse Case:%0D%0APreferred Time:%0D%0A%0D%0AThanks!';
+              }}
+              aria-label="Book a demo with Observare"
+              className="px-4 py-2 border border-gray-600 text-white rounded-lg hover:border-gray-500 hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+            >
+              Book a Demo
+            </button>
             <button 
               onClick={() => {
                 console.log('Get Early Access (nav) clicked');
