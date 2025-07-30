@@ -26,6 +26,26 @@ export default function Home() {
           <p className="text-base sm:text-lg text-gray-400 max-w-3xl mx-auto px-4">
             Complete visibility and control over your AI agents in production.
           </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6 text-sm sm:text-base">
+            <div className="flex items-center gap-2 text-green-400">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Real-time Safety</span>
+            </div>
+            <div className="flex items-center gap-2 text-purple-400">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              <span>GDPR/HIPAA Ready</span>
+            </div>
+            <div className="flex items-center gap-2 text-orange-400">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <span>Instant PII Redaction</span>
+            </div>
+          </div>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-8 px-4">
             <button 
               onClick={() => {
@@ -73,6 +93,12 @@ export default function Home() {
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               (And you don&apos;t even know it)
             </p>
+            <div className="mt-8 p-6 bg-blue-900/20 border border-blue-700/50 rounded-xl max-w-3xl mx-auto">
+              <p className="text-lg text-blue-300 font-medium">
+                While competitors analyze post-mortems, Observare prevents failures in real-time. 
+                <span className="text-blue-200"> Your agents stay safe, compliant, and visible—before problems occur.</span>
+              </p>
+            </div>
           </div>
 
           <div className="space-y-12 text-lg leading-relaxed">
@@ -115,6 +141,12 @@ export default function Home() {
           <p className="text-xl text-gray-300 animate-fade-in animation-delay-200">
             Every problem above has a direct solution
           </p>
+          <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-emerald-900/30 border border-emerald-700/50 rounded-full">
+            <svg className="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+            <span className="text-emerald-300 font-medium">Proactive Protection vs Reactive Analysis</span>
+          </div>
         </div>
 
         <div className="space-y-16">
@@ -289,69 +321,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-800/30 border-t border-gray-700">
-        <div className="px-4 sm:px-6 py-12 mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Company Info */}
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">O</span>
-                </div>
-                <span className="text-xl font-semibold text-white">Observare</span>
-              </div>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                AI Agent observability and compliance platform for regulated industries.
-              </p>
-              <div className="text-gray-400 text-sm">
-                <p>Nashville, TN</p>
-              </div>
-            </div>
-
-            {/* Contact */}
-            <div className="space-y-4">
-              <h3 className="text-white font-semibold">Contact</h3>
-              <div className="space-y-2 text-sm">
-                <button 
-                  onClick={() => {
-                    window.location.href = 'mailto:bseager21@gmail.com?subject=Demo Request - Observare&body=Hi Brandon,%0D%0A%0D%0AI would like to schedule a demo of Observare.%0D%0A%0D%0ACompany:%0D%0AUse Case:%0D%0APreferred Time:%0D%0A%0D%0AThanks!';
-                  }}
-                  className="block text-gray-400 hover:text-white transition-colors"
-                >
-                  Book a Demo
-                </button>
-              </div>
-            </div>
-
-            {/* Product */}
-            <div className="space-y-4">
-              <h3 className="text-white font-semibold">Product</h3>
-              <div className="space-y-2 text-sm">
-                <button 
-                  onClick={() => {
-                    window.open('https://tally.so/r/mKKoaA', '_blank');
-                  }}
-                  className="block text-gray-400 hover:text-white transition-colors"
-                >
-                  Early Access
-                </button>
-                <span className="block text-gray-500">Compliance & Governance</span>
-                <span className="block text-gray-500">Agent Monitoring</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-gray-500 text-sm">
-              © 2025 Observare. All rights reserved.
-            </p>
-            <p className="text-gray-500 text-sm mt-2 sm:mt-0">
-              Made in Nashville, TN
-            </p>
-          </div>
-        </div>
-      </footer>
 
       <style jsx>{`
         @keyframes blob {

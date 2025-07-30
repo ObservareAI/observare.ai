@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 
@@ -45,9 +46,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navigation />
-        <main className="pt-16">
+        <main className="pt-16 min-h-screen">
           {children}
         </main>
+        <Footer />
       </body>
       <GoogleAnalytics gaId="G-XGED7BH6TY" />
     </html>
